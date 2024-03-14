@@ -1,0 +1,9 @@
+[submodule "3dcertify"]
+	path = 3dcertify
+	url = https://github.com/eth-sri/3dcertify.git
+[submodule "alpha-beta-CROWN"]
+	path = alpha-beta-CROWN
+	url = https://github.com/Verified-Intelligence/alpha-beta-CROWN.git
+[submodule "CNN-Cert"]
+	path = CNN-Cert
+	url = https://github.com/IBM/CNN-Cert.git
