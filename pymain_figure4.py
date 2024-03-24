@@ -3,7 +3,7 @@ os.system(" cp -r maxlin.c 3dcertify/ERAN/ELINA/fppoly/pool_approx.c ")
 os.system(" cd 3dcertify/ERAN/ELINA/ && make all ")
 for i in [0.010,0.012,0.013,0.014,0.015]:
     command=f"python __main__.py \
-        --netname /data/code/benchmark-maxlin/nets/Convnet_maxpool.onnx \
+        --netname /data/code/benchmark-maxlin/nets/cifar_conv_maxpool.onnx \
         --epsilon {i}\
         --domain refinepoly \
         --dataset mnist \
