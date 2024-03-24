@@ -42,7 +42,7 @@ conda env create -f 3dcertify-env.yml
 conda activate 3dcertify
 ```
 
-Download the CNN models used in the paper. We use CNN-Cert(https://www.dropbox.com/s/mhe8u2vpugxz5ed/models.zip), 3DCertify(https://files.sri.inf.ethz.ch/pointclouds/pretrained-models.zip), Verivital(accessd in https://github.com/stanleybak/vnncomp2021), and ERAN (accessed in https://github.com/eth-sri/eran) benchmarks.
+Download the CNN models used in the paper. We use CNN-Cert(https://www.dropbox.com/s/mhe8u2vpugxz5ed/models.zip), 3DCertify(https://files.sri.inf.ethz.ch/pointclouds/pretrained-models.zip), and ERAN (accessed in https://github.com/eth-sri/eran) benchmarks.
 
 Some models(.h5) need to be transformed into other typt(.pb)
 ```bash
@@ -70,8 +70,7 @@ nohup ./table2.sh > ./table2result.log &
 ```bash
 python pymain_figure4.py
 ```
-
-Generate properties for Verivital benchmarks(https://github.com/stanleybak/vnncomp2021/blob/main/benchmarks/verivital/generate_properties.py) and use the configuration provided in https://github.com/Verified-Intelligence/alpha-beta-CROWN/blob/main/complete_verifier/exp_configs/vnncomp21/verivital.yaml 
+ 
 ### The results in Figure 5(after generating properties)
 ```bash
 python pymain_figure5.py
