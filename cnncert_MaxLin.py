@@ -512,23 +512,18 @@ def run(file_name, n_samples, p_n, q_n, activation = 'relu', cifar=False, tinyim
         print('--- MaxLin: Computing eps for input image ' + str(i)+ '---')
         predict_label = np.argmax(true_labels[i])
         target_label = np.argmax(targets[i])
-        weights = model.weights[:-1]
-        biases = model.biases[:-1]
-        shapes = model.shapes[:-1]
-        W, b, s = model.weights[-1], model.biases[-1], model.shapes[-1]
-        last_weight = (W[predict_label,:,:,:]-W[target_label,:,:,:]).reshape([1]+list(W.shape[1:]))
-        weights.append(last_weight)
-        biases.append(np.asarray([b[predict_label]-b[target_label]]))
-        shapes.append((1,1,1))
-
+        weights = model.weights
+        biases = model.biases
+        shapes = model.shapes
+#different from CNN-Cert, which only consider the robustness guarantee against the random,target,least or top-2 label, MaxLin computes the maximal safe robustness bound against all labels (except for the true label).
         #Perform binary search
         log_eps = np.log(eps_0)
         log_eps_min = -np.inf
         log_eps_max = np.inf
         for j in range(steps):
             LB, UB = find_output_bounds(weights, biases, shapes, model.pads, model.strides, inputs[i].astype(np.float32), np.exp(log_eps), p_n)
-            UB[predict_label]=-np.inf
-            minmax=LB[predict_label]-UB.max()
+            UB[0][0][predict_label]=-np.inf
+            minmax=LB[0][0][predict_label]-UB.max()
             target_label=np.where(UB==UB.max())
             print("Step {}, eps = {:.5f}, {:.6s} <= f_c - f_t <= {:.6s}".format(j,np.exp(log_eps),str(np.squeeze(LB)),str(np.squeeze(UB))))
             if minmax > 0: #Increase eps
