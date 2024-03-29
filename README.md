@@ -1,5 +1,5 @@
 
-# Towards General Robustness Verification of MaxPool-based Convolutional Neural Networks via Tightening Linear Approximation
+# Towards General Robustness Verification of MaxPool-based Convolutional Neural Networks via Tightening Linear Approximation (CVPR 2024)
 ## Setup Instructions
 
 Clone this repository, including all submodules:
