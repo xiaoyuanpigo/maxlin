@@ -81,3 +81,17 @@ python pymain_figure5.py
 nohup ./table4.sh > ./table4result.log &
 ```
 [1] Akhilan Boopathy, Tsui-Wei Weng, Pin-Yu Chen, Sijia Liu, and Luca Daniel. Cnn-cert: an efficient framework for certifying robustness of convolutional neural networks. In Proceedings of the AAAI Conference on Artificial Intelligenc (AAAI), pages 3240–3247, 2019.
+
+
+
+## Citation
+If you find our work helpful, please consider citing 
+
+```bash
+@article{maxlin,
+  author    = {Yuan Xiao, Shiqing Ma, Juan Zhai, Chunrong Fang, Jinyuan Jia, Zhenyu Chen.},
+  title     = {Towards General Robustness Verification of MaxPool-based Convolutional Neural Networks via Tightening Linear Approximation},
+  journal   = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2024},
+}
+```
