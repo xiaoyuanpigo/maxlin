@@ -88,10 +88,11 @@ nohup ./table4.sh > ./table4result.log &
 If you find our work helpful, please consider citing 
 
 ```bash
-@article{maxlin,
-  author    = {Yuan Xiao, Shiqing Ma, Juan Zhai, Chunrong Fang, Jinyuan Jia, Zhenyu Chen.},
-  title     = {Towards General Robustness Verification of MaxPool-based Convolutional Neural Networks via Tightening Linear Approximation},
-  journal   = {Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year      = {2024},
+@inproceedings{xiao2024towards,
+  title={Towards General Robustness Verification of MaxPool-based Convolutional Neural Networks via Tightening Linear Approximation},
+  author={Xiao, Yuan and Ma, Shiqing and Zhai, Juan and Fang, Chunrong and Jia, Jinyuan and Chen, Zhenyu},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={24766--24775},
+  year={2024}
 }
 ```
