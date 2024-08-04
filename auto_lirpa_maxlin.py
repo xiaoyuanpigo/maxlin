@@ -586,7 +586,7 @@ class BoundMaxPool(BoundOptimizableActivation):
         pre_layer_shape = np.expand_dims(gvars_array, axis=0).shape
         # this layer shape (1,32,6,6)
         this_layer_shape = self.output_shape
-        assert this_layer_shape[2] ==  ((2 * self.padding[0] + pre_layer_shape[2] - (self.stride[0] - 1))//self.stride[0])
+        assert this_layer_shape[2] ==  ((2 * self.padding[0] + pre_layer_shape[2] - (self.stride[0] - 1))//self.stride[0] +1 )
 
         new_layer_gurobi_vars = []
         neuron_idx = 0
